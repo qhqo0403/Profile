@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body, html{
+  font-family: Poppins, sans-serif;;
+  font-size: 16px;
+  overflow-x: hidden
+}
+section{
+  width: 100vw; height: 100vh;
+}
+#page01{
+  background: white;
+}
+#page01 particles-js{
+  width: 100%; height: 100%;
+  position: absolute; left: 0; top: 0; z-index: -10;
+}
+
+#page01 #links{
+  width: 100%; height: 60px;
+  position: absolute; left: 0; bottom: 0; z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #ededed;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.5);
+}
+#page01 #links.first{
+  position: fixed; top: 60px;
+}
+#page01 #links.second{
+  position: fixed; top: 0;
+}
+#page01 #links a{
+  display: block;
+  width: 25%;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+  font-size: 2rem;
+}
+#page01 .txt{
+  position: absolute; left: 3%; top: 5%;
+}
+#page01 .txt p {
+  font-size: 7rem;
+  font-weight: 700;
+}
+#page01 .txt p span{
+  opacity: 0;
+  position: relative; top: -70px;
+  transition: all .5s ease-in-out;
+}
+#page01 .txt p span.reveal{
+  opacity: 1;
+  top: 0;
+}
+/* #page01 p{
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: 600;
+  white-space: nowrap;
+} */
+#current-page{
+  width: 25%; height: 10px;
+  background: #e07a5f;
+  position: absolute; left: 0; bottom: 0;
+  /* display: none; */
+}
+#current-page.show{
+  display: block;
+}
+/*--------------------page 02 --------------------*/
+#page02{
+  position: relative;
+  padding-top: 60px;
+  background: #333;
+  position: relative;
+}
+#page02 .wrapper{
+  position: absolute; left: 0; top: 0;
+  width: 100%; height: 100%;
+}
+#page02 .wrapper>div{
+  position: absolute;
+  background: none;
+  border: 2px solid white;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  transition: all .5s;
+  animation: flow 3s linear infinite;
+  opacity: 0.6;
+}
+#page02 .wrapper>.circle1{
+  width: 400px; height: 400px;
+  left: 15%; top: 25%;
+  border-color: #f4f1de;
+}
+#page02 .wrapper>.circle1:hover{
+  background: #f4f1de
+}
+#page02 .wrapper>.circle2{
+  width: 200px; height: 200px;
+  left: 30%; top: 45%;
+  border-color: #e07a5f;
+  animation-duration: 4s;
+	animation-direction: reverse;
+}
+#page02 .wrapper>.circle2:hover{
+  background: #e07a5f;
+}
+#page02 .wrapper>.circle3{
+  width: 300px; height: 300px;
+  left: 35%; top: 35%;
+  border-color: #13d1d8;
+  animation-duration: 8s;
+}
+#page02 .wrapper>.circle3:hover{
+  background: #13d1d8;
+}
+#page02 .wrapper>.circle4{
+  width: 500px; height: 500px;
+  left: 50%; top: 20%;
+  border-color: #81b29a;
+  animation-duration: 8s;
+	animation-direction: reverse;
+}
+#page02 .wrapper>.circle4:hover{
+  background: #81b29a;
+}
+#page02 .wrapper>.circle5{
+  width: 300px; height: 300px;
+  left: 65%; top: 35%;
+  border-color: #f2cc8f;
+  animation-duration: 5s;
+}
+#page02 .wrapper>.circle5:hover{
+  background: #f2cc8f;
+}
+#page02 p{
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+#page02 p>span{
+  font-size: 1.4rem;
+}
+#page02 .stack{
+  width: 90%;
+  position: absolute; left: 50%; bottom: 5%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+#page02 .stack img{
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all .6s cubic-bezier(0.68,-0.55,0.27,1.55);;
+}
+#page02 .stack img.visible{
+  transform: translateY(-50px);
+  opacity: 1;
+}
+@keyframes flow{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+/*--------------page03 --------------------*/
+#page03{
+  width: 100%; height: 100%;
+}
+#page03 .container{
+  width: 400%; height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#page03 .container div{
+  width: 100%; height: 100vh;
+  position: relative;
+  padding-top: 60px;
+}
+#page03 .container div h2{
+  font-size: 8rem;
+  margin-left: 50px;
+  color: #ededed;
+}
+
+/*------------------page04-----------------------*/
+#page04{
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #fff;
+}
+#page04 strong{
+  font-size: 4rem;
+  font-weight: 500;
+  background-position: 0;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: textshine 3s infinite linear;
+}
+#page04 div{
+  margin-top: 20px;
+}
+#page04 div>h4{
+  font-size: 1.5rem;
+}
+@keyframes textshine{
+  0%{
+    background-position: 0
+  }
+  100%{
+    background-position: 430px
+  }
+}
+/* #page04{
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 500;
+  background: #333;
+}
+ */

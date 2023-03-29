@@ -72,6 +72,7 @@ section{
   width: 25%; height: 10px;
   background: #e07a5f;
   position: absolute; left: 0; bottom: 0;
+  transition: all .3s;
   /* display: none; */
 }
 #current-page.show{
@@ -94,7 +95,7 @@ section{
   border: 2px solid white;
   border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
   transition: all .5s;
-  animation: flow 3s linear infinite;
+  /* animation: flow 3s linear infinite; */
   opacity: 0.6;
 }
 #page02 .wrapper>.circle1{

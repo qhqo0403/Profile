@@ -149,11 +149,11 @@ window.onload=function(){
   const currentPage = () => {
     let initialTop = window.pageYOffset;  
     //console.log(page2.offsetTop ,page3.offsetTop , page4.offsetTop )
-    if (initialTop <= page2.offsetTop){
+    if (initialTop <= (page2.offsetTop - 10)){
       pageBar.style.left = '0%'; 
-    } else if (initialTop <= page3.offsetTop){
+    } else if (initialTop <= page3.offsetTop - 10){
       pageBar.style.left = '25%';  
-    } else if (initialTop < page4.offsetTop){
+    } else if (initialTop < page4.offsetTop - 10){
       pageBar.style.left = '50%';
     } else{
       pageBar.style.left = '75%';

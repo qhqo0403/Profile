@@ -1,8 +1,3 @@
-/* particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
-
- */
 particlesJS("particles-js", {
   particles: {
     number: {
@@ -115,6 +110,7 @@ window.onload=function(){
   const page3 = document.getElementById('page03');
   const page4 = document.getElementById('page04');
   const linkBar = document.getElementById('links');
+  const anchors = linkBar.querySelectorAll('a');
   //console.log(page2.offsetTop ,page3.offsetTop , page4.offsetTop )
   const originTop = linkBar.offsetTop;
   const pageBar = document.getElementById('current-page');
@@ -133,6 +129,18 @@ window.onload=function(){
     });
   }
   revealTxt();
+
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      let pos = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({ top: pos.offsetTop, behavior: 'smooth' });
+      console.log(window.pageYOffset);
+      /* targetPos = document.querySelector(target).offsetTop;*/
+    });
+  });
+
+
 
   const revealImg = () => {
     let initialTop = window.pageYOffset;

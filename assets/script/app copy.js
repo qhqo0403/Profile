@@ -144,6 +144,7 @@ window.onload=function(){
 
   const revealImg = () => {
     let initialTop = window.pageYOffset;
+    console.log(initialTop);
     if (initialTop >= page2.offsetTop) {
       let imgs = document.querySelectorAll('img');
       imgs.forEach((img, idx) => {
